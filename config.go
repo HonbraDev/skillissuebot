@@ -7,10 +7,10 @@ import (
 )
 
 type Config struct {
-	configPath     string           `json:"-"`
-	IgnoredPlayers ConfigPlayerList `json:"ignoredPlayers"`
-	CommandPrefix  string           `json:"commandPrefix"`
-	CoolPeople     ConfigPlayerList `json:"coolPeople"`
+	configPath    string           `json:"-"`
+	CommandPrefix string           `json:"commandPrefix"`
+	UncoolPeople  ConfigPlayerList `json:"uncoolPeople"`
+	CoolPeople    ConfigPlayerList `json:"coolPeople"`
 }
 
 func LoadConfig(p string) (Config, error) {
@@ -21,7 +21,8 @@ func LoadConfig(p string) (Config, error) {
 		return c, err
 	}
 	defer f.Close()
-	c.IgnoredPlayers = make(ConfigPlayerList)
+	c.UncoolPeople = make(ConfigPlayerList)
+	c.CoolPeople = make(ConfigPlayerList)
 	c.configPath = p
 	err = json.NewDecoder(f).Decode(&c)
 	if err != nil {

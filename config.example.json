@@ -1,4 +1,8 @@
 {
-  "ignoredPlayers": ["BOT1", "BOT2"],
+  "commandPrefix": "!",
+  "ignoredPlayers": [
+    "Bot1",
+    "Bot2"
+  ],
   "coolPeople": ["Honbra"]
 }

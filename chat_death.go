@@ -10,7 +10,7 @@ import (
 func (b *Bot) handleChatDeath(c chat.Message) error {
 	target := getDeathTarget(c)
 	b.Logger.Println("target:", target)
-	if b.IgnoredPlayers.IsIgnored(target) || target == b.Client.Name {
+	if b.UncoolPeople.IsIgnored(target) || target == b.Client.Name {
 		return nil
 	}
 	skillIssue := getSkillIssue(c)
