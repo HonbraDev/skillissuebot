@@ -11,6 +11,7 @@ type Config struct {
 	CommandPrefix string           `json:"commandPrefix"`
 	UncoolPeople  ConfigPlayerList `json:"uncoolPeople"`
 	CoolPeople    ConfigPlayerList `json:"coolPeople"`
+	BedCoords     Position         `json:"bedCoords"`
 }
 
 func LoadConfig(p string) (Config, error) {

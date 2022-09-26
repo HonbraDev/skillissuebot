@@ -11,12 +11,13 @@ var skillIssuesGeneric = []string{
 	"skill issue",
 	"emotional damage!",
 	"died of death",
-	"TODO: Git gud",
+	"TODO: git gud",
+	"git clone skill --depth 1 --recursive",
 	// "maybe something like buy a lootbox to get better", // ~ Philipp_DE1337
 }
 
 var skillIssuesFall = append(skillIssuesGeneric,
-	"fix your haxx",
+	"fix your hax",
 	"didn't fix their hax",
 )
 

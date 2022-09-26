@@ -4,5 +4,10 @@
     "Bot1",
     "Bot2"
   ],
-  "coolPeople": ["Honbra"]
+  "coolPeople": ["Honbra"],
+  "bedCoords": {
+    "x": 1337,
+    "y": -69420,
+    "z": 1337
+  }
 }
